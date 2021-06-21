@@ -1,0 +1,24 @@
+# permissions for end users to edit registry-failovers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: registry-failover-editor-role
+rules:
+- apiGroups:
+  - cache.vologue.dev
+  resources:
+  - registry-failovers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.vologue.dev
+  resources:
+  - registry-failovers/status
+  verbs:
+  - get

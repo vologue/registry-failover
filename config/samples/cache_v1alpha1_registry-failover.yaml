@@ -1,0 +1,7 @@
+apiVersion: cache.vologue.dev/v1alpha1
+kind: Registry-failover
+metadata:
+  name: registry-failover-sample
+spec:
+  # Add fields here
+  foo: bar
